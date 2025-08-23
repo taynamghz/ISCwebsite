@@ -328,7 +328,15 @@ const galleryData = {
     'street-eats': [
         'street-eats/2a8bde15-1ca9-48b0-bfed-f7b6123ea8cf.JPG',
         'street-eats/WhatsApp Image 2025-08-22 at 16.51.07.jpeg',
-        'street-eats/WhatsApp Image 2025-08-22 at 16.51.19.jpeg'
+        'street-eats/WhatsApp Image 2025-08-22 at 16.51.19.jpeg',
+        'street-eats/IMG_1443.HEIC',
+        'street-eats/IMG_1450.HEIC',
+        'street-eats/IMG_1663.HEIC',
+        'street-eats/IMG_2379.HEIC',
+        'street-eats/IMG_6227.HEIC',
+        'street-eats/IMG_6271.HEIC',
+        'street-eats/IMG_6275.HEIC',
+        'street-eats/IMG_6371.HEIC'
     ],
     'hakaya-ramadan': [
         'hakaya-ramadan/DSC_0242.JPG',
