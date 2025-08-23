@@ -250,153 +250,192 @@
             </div>
         </div>
     </section>
-
-    <!-- Registration Section -->
-    <section id="register" class="register">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title-highlight">Join Our Club</h2>
-                <p class="section-subtitle">Become part of our international family</p>
-            </div>
-            <div class="register-content">
-                <div class="register-info">
-                    <h3>Why Join ISC?</h3>
-                    <ul>
-                        <li><i class="fas fa-check"></i> Connect with students from around the world</li>
-                        <li><i class="fas fa-check"></i> Learn about different cultures and traditions</li>
-                        <li><i class="fas fa-check"></i> Participate in exciting international events</li>
-                        <li><i class="fas fa-check"></i> Develop leadership and communication skills</li>
-                        <li><i class="fas fa-check"></i> Build lifelong friendships</li>
-                        <li><i class="fas fa-check"></i> Gain hands-on experience in event management, project planning, and marketing</li>
-                        <li><i class="fas fa-check"></i> Strengthen your teamwork and organizational skills</li>
-                    </ul>
-                    <div class="why-join-image">
-                        <img src="whyUs.jpeg" alt="Why Join ISC" class="why-us-photo">
-                    </div>
-                </div>
-                <div class="register-form">
-                    <form id="registrationForm">
-                        <div class="form-group">
-                            <label for="fullName">Full Name *</label>
-                            <input type="text" id="fullName" name="fullName" placeholder="Full Name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phoneNumber">Phone Number *</label>
-                            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="studentId">Student ID *</label>
-                            <input type="text" id="studentId" name="studentId" placeholder="Student ID" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="major">Major *</label>
-                            <select id="major" name="major" required>
-                                <option value="">Select Major</option>
-                                <optgroup label="College of Computer Science and Information System">
-                                    <option value="Computer Science">Computer Science</option>
-                                    <option value="Information Technology">Information Technology</option>
-                                    <option value="Software Engineering">Software Engineering</option>
-                                    <option value="Data Science">Data Science</option>
-                                    <option value="Cybersecurity">Cybersecurity</option>
-                                </optgroup>
-                                <optgroup label="College of Law">
-                                    <option value="Law">Law</option>
-                                </optgroup>
-                                <optgroup label="College of Engineering">
-                                    <option value="Electrical Engineering">Electrical Engineering</option>
-                                    <option value="Mechanical Engineering">Mechanical Engineering</option>
-                                    <option value="Civil Engineering">Civil Engineering</option>
-                                    <option value="Chemical Engineering">Chemical Engineering</option>
-                                </optgroup>
-                                <optgroup label="College of Humanities">
-                                    <option value="English Literature">English Literature</option>
-                                    <option value="Translation">Translation</option>
-                                    <option value="Linguistics">Linguistics</option>
-                                    <option value="Psychology">Psychology</option>
-                                    <option value="Sociology">Sociology</option>
-                                </optgroup>
-                                <optgroup label="College of Business">
-                                    <option value="Business Administration">Business Administration</option>
-                                    <option value="Marketing">Marketing</option>
-                                    <option value="Finance">Finance</option>
-                                    <option value="Accounting">Accounting</option>
-                                    <option value="Economics">Economics</option>
-                                </optgroup>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="graduationYear">Expected Graduation Year *</label>
-                            <select id="graduationYear" name="graduationYear" required>
-                                <option value="">Select Year</option>
-                                <option value="2025">2025</option>
-                                <option value="2026">2026</option>
-                                <option value="2027">2027</option>
-                                <option value="2028">2028</option>
-                                <option value="2029">2029</option>
-                                <option value="2030">2030</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="role">Role *</label>
-                            <select id="role" name="role" required>
-                                <option value="">Select Role</option>
-                                <option value="member">Club Member</option>
-                                <option value="volunteer">Volunteer</option>
-                                <option value="leader">Team Leader</option>
-                                <option value="coordinator">Event Coordinator</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="department">Department Preferred *</label>
-                            <div class="department-options">
-                                <label class="department-option">
-                                    <input type="radio" name="department" value="PM" required>
-                                    <span class="department-label">PM</span>
-                                </label>
-                                <label class="department-option">
-                                    <input type="radio" name="department" value="HR" required>
-                                    <span class="department-label">HR</span>
-                                </label>
-                                <label class="department-option">
-                                    <input type="radio" name="department" value="PR" required>
-                                    <span class="department-label">PR</span>
-                                </label>
-                                <label class="department-option">
-                                    <input type="radio" name="department" value="Marketing" required>
-                                    <span class="department-label">Marketing</span>
-                                </label>
-                                <label class="department-option">
-                                    <input type="radio" name="department" value="Logistics" required>
-                                    <span class="department-label">Logistics</span>
-                                </label>
-                                <label class="department-option">
-                                    <input type="radio" name="department" value="Finance" required>
-                                    <span class="department-label">Finance</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="roleSuitability">Why do you suit this role? Briefly explain your previous roles or interests *</label>
-                            <textarea id="roleSuitability" name="roleSuitability" placeholder="Explain why you're suitable for this role..." rows="3" required></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="previousExperience">Tell us more about your previous experience: *</label>
-                            <textarea id="previousExperience" name="previousExperience" placeholder="Describe your relevant experience..." rows="4" required></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="resume">Attach your previous work or resume (If any)</label>
-                            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx,.jpg,.png">
-                            <small>Accepted formats: PDF, DOC, DOCX, JPG, PNG (Max 5MB)</small>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit Application</button>
-                        <button type="button" class="btn btn-secondary" onclick="testFormSubmission()" style="margin-left: 10px;">Test Connection</button>
-                    </form>
-                </div>
-            </div>
+<!-- Registration Section -->
+<section id="register" class="register">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title-highlight">Join Our Club</h2>
+        <p class="section-subtitle">Become part of our international family</p>
+      </div>
+  
+      <div class="register-content">
+        <div class="register-info">
+          <h3>Why Join ISC?</h3>
+          <ul>
+            <li><i class="fas fa-check"></i> Connect with students from around the world</li>
+            <li><i class="fas fa-check"></i> Learn about different cultures and traditions</li>
+            <li><i class="fas fa-check"></i> Participate in exciting international events</li>
+            <li><i class="fas fa-check"></i> Develop leadership and communication skills</li>
+            <li><i class="fas fa-check"></i> Build lifelong friendships</li>
+            <li><i class="fas fa-check"></i> Gain hands-on experience in event management, project planning, and marketing</li>
+            <li><i class="fas fa-check"></i> Strengthen your teamwork and organizational skills</li>
+          </ul>
+          <div class="why-join-image">
+            <img src="whyUs.jpeg" alt="Why Join ISC" class="why-us-photo">
+          </div>
         </div>
-    </section>
-
+  
+        <div class="register-form">
+          <form id="registrationForm">
+            <div class="form-group">
+              <label for="fullName">Full Name *</label>
+              <input type="text" id="fullName" name="fullName" placeholder="Full Name" required>
+            </div>
+  
+            <div class="form-group">
+              <label for="phoneNumber">Phone Number *</label>
+              <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" required>
+            </div>
+  
+            <div class="form-group">
+              <label for="studentId">Student ID *</label>
+              <input type="text" id="studentId" name="studentId" placeholder="Student ID" required>
+            </div>
+  
+            <div class="form-group">
+              <label for="major">Major *</label>
+              <select id="major" name="major" required>
+                <option value="">Select Major</option>
+                <optgroup label="College of Computer Science and Information System">
+                  <option value="Computer Science">Computer Science</option>
+                  <option value="Information Technology">Information Technology</option>
+                  <option value="Software Engineering">Software Engineering</option>
+                  <option value="Data Science">Data Science</option>
+                  <option value="Cybersecurity">Cybersecurity</option>
+                </optgroup>
+                <optgroup label="College of Law">
+                  <option value="Law">Law</option>
+                </optgroup>
+                <optgroup label="College of Engineering">
+                  <option value="Electrical Engineering">Electrical Engineering</option>
+                  <option value="Mechanical Engineering">Mechanical Engineering</option>
+                  <option value="Civil Engineering">Civil Engineering</option>
+                  <option value="Chemical Engineering">Chemical Engineering</option>
+                </optgroup>
+                <optgroup label="College of Humanities">
+                  <option value="English Literature">English Literature</option>
+                  <option value="Translation">Translation</option>
+                  <option value="Linguistics">Linguistics</option>
+                  <option value="Psychology">Psychology</option>
+                  <option value="Sociology">Sociology</option>
+                </optgroup>
+                <optgroup label="College of Business">
+                  <option value="Business Administration">Business Administration</option>
+                  <option value="Marketing">Marketing</option>
+                  <option value="Finance">Finance</option>
+                  <option value="Accounting">Accounting</option>
+                  <option value="Economics">Economics</option>
+                </optgroup>
+              </select>
+            </div>
+  
+            <div class="form-group">
+              <label for="graduationYear">Expected Graduation Year *</label>
+              <select id="graduationYear" name="graduationYear" required>
+                <option value="">Select Year</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+                <option value="2029">2029</option>
+                <option value="2030">2030</option>
+              </select>
+            </div>
+  
+            <div class="form-group">
+              <label for="role">Role *</label>
+              <select id="role" name="role" required>
+                <option value="">Select Role</option>
+                <option value="member">Club Member</option>
+                <option value="volunteer">Volunteer</option>
+                <option value="leader">Team Leader</option>
+                <option value="coordinator">Event Coordinator</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+  
+            <div class="form-group">
+              <label for="department">Department Preferred *</label>
+              <div class="department-options">
+                <label class="department-option">
+                  <input type="radio" name="department" value="PM" required>
+                  <span class="department-label">PM</span>
+                </label>
+                <label class="department-option">
+                  <input type="radio" name="department" value="HR" required>
+                  <span class="department-label">HR</span>
+                </label>
+                <label class="department-option">
+                  <input type="radio" name="department" value="PR" required>
+                  <span class="department-label">PR</span>
+                </label>
+                <label class="department-option">
+                  <input type="radio" name="department" value="Marketing" required>
+                  <span class="department-label">Marketing</span>
+                </label>
+                <label class="department-option">
+                  <input type="radio" name="department" value="Logistics" required>
+                  <span class="department-label">Logistics</span>
+                </label>
+                <label class="department-option">
+                  <input type="radio" name="department" value="Finance" required>
+                  <span class="department-label">Finance</span>
+                </label>
+              </div>
+            </div>
+  
+            <div class="form-group">
+              <label for="roleSuitability">Why do you suit this role? *</label>
+              <textarea id="roleSuitability" name="roleSuitability" placeholder="Explain why you're suitable for this role..." rows="3" required></textarea>
+            </div>
+  
+            <div class="form-group">
+              <label for="previousExperience">Tell us more about your previous experience: *</label>
+              <textarea id="previousExperience" name="previousExperience" placeholder="Describe your relevant experience..." rows="4" required></textarea>
+            </div>
+  
+            <div class="form-group">
+              <label for="resume">Attach your previous work or resume (If any)</label>
+              <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx,.jpg,.png">
+              <small>Accepted formats: PDF, DOC, DOCX, JPG, PNG (Max 5MB)</small>
+            </div>
+  
+            <button type="submit" class="btn btn-primary">Submit Application</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <script>
+  document.getElementById('registrationForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+    const params = new URLSearchParams();
+    for(const pair of formData.entries()){
+      params.append(pair[0], pair[1]);
+    }
+  
+    fetch('https://script.google.com/a/macros/psu.edu.sa/s/AKfycbyiyeSrHi-Elne5RiKmXr0L_kSuGej8O5EdvrVYxmws204U30n4G2FS4mvpj9pWUPZZ/exec', {
+      method: 'POST',
+      body: params
+    })
+    .then(res => res.json())
+    .then(data => {
+      if(data.result === 'success'){
+        alert('Application submitted successfully!');
+        form.reset();
+      } else {
+        alert('Error: ' + data.message);
+      }
+    })
+    .catch(err => {
+      console.error(err);
+      alert('Error submitting the form. Please try again.');
+    });
+  });
+  </script>
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
