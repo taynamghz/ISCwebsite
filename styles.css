@@ -1854,6 +1854,18 @@ p {
     transition: transform 0.3s ease;
 }
 
+.gallery-overlay h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.gallery-overlay p {
+    font-size: 0.9rem;
+    color: white;
+    opacity: 1;
+}
+
 .gallery-detailed .gallery-item:hover .gallery-overlay {
     transform: translateY(0);
 }
