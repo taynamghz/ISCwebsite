@@ -295,7 +295,71 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.transform = 'translateY(0) scale(1)';
         });
     });
+
+    // Gallery modal functionality
+    const modal = document.getElementById('galleryModal');
+    const closeBtn = document.querySelector('.close');
+    
+    if (closeBtn) {
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+    }
+    
+    if (modal) {
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    }
 });
+
+// Gallery data for different events
+const galleryData = {
+    'international-food': [
+        'international-food/IMG_5864.HEIC',
+        'international-food/WhatsApp Image 2025-08-22 at 16.45.31 (3).jpeg'
+    ],
+    'game-board': [
+        'game-board/WhatsApp Image 2025-08-22 at 16.45.31 (2).jpeg',
+        'game-board/WhatsApp Image 2025-08-22 at 16.45.31 (1).jpeg'
+    ],
+    'street-eats': [
+        'street-eats/2a8bde15-1ca9-48b0-bfed-f7b6123ea8cf.JPG',
+        'street-eats/WhatsApp Image 2025-08-22 at 16.51.07.jpeg',
+        'street-eats/WhatsApp Image 2025-08-22 at 16.51.19.jpeg'
+    ],
+    'hakaya-ramadan': [
+        'hakaya-ramadan/DSC_0242.JPG',
+        'hakaya-ramadan/WhatsApp Image 2025-08-22 at 16.45.30 (1).jpeg',
+        'hakaya-ramadan/WhatsApp Image 2025-08-22 at 16.45.31.jpeg',
+        'hakaya-ramadan/WhatsApp Image 2025-08-22 at 16.47.25.jpeg',
+        'hakaya-ramadan/WhatsApp Image 2025-08-22 at 16.48.16.jpeg',
+        'hakaya-ramadan/WhatsApp Image 2025-08-22 at 16.48.59.jpeg',
+        'hakaya-ramadan/WhatsApp Image 2025-08-22 at 16.49.20.jpeg',
+        'hakaya-ramadan/WhatsApp Image 2025-08-22 at 16.50.33.jpeg'
+    ]
+};
+
+function openGallery(eventType) {
+    const modal = document.getElementById('galleryModal');
+    const modalGallery = document.getElementById('modalGallery');
+    
+    if (modal && modalGallery && galleryData[eventType]) {
+        modalGallery.innerHTML = '';
+        
+        galleryData[eventType].forEach(imageSrc => {
+            const img = document.createElement('img');
+            img.src = imageSrc;
+            img.alt = `${eventType} event`;
+            img.className = 'modal-image';
+            modalGallery.appendChild(img);
+        });
+        
+        modal.style.display = "block";
+    }
+}
 
 // Add typing effect to hero title (optional enhancement)
 function typeWriter(element, text, speed = 100) {
