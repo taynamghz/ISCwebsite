@@ -523,34 +523,39 @@ p {
 }
 
 .mission-card {
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.9);
     padding: 2.5rem;
     border-radius: 15px;
     text-align: center;
-    box-shadow: var(--shadow);
-    transition: transform 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    backdrop-filter: blur(10px);
 }
 
 .mission-card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border-color: #feba4b;
 }
 
 .card-icon {
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, #312b69, #14a99d);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 1.5rem;
     font-size: 2rem;
-    color: var(--white);
+    color: white;
 }
 
 .mission-card h3 {
-    color: var(--primary-color);
+    color: #312b69;
     margin-bottom: 1rem;
+    font-family: 'Palatino', 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
 }
 
 .mission-card ul {
@@ -560,7 +565,9 @@ p {
 
 .mission-card li {
     padding: 0.5rem 0;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid rgba(49, 43, 105, 0.2);
+    color: #14a99d;
+    font-family: 'Palatino', 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
 }
 
 .mission-card li:last-child {
@@ -1485,20 +1492,19 @@ p {
 }
 
 .contact-item .social-link {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
     display: flex;
     align-items: center;
-    gap: 0.8rem;
-    padding: 1rem 1.2rem;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
+    justify-content: center;
     color: var(--white);
     text-decoration: none;
     transition: all 0.4s ease;
     border: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(20px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    min-width: 140px;
-    justify-content: center;
 }
 
 .contact-item .social-link:hover {
@@ -1515,36 +1521,36 @@ p {
 }
 
 .contact-item .social-link.instagram {
-    background: rgba(228, 64, 95, 0.1);
-    border-color: rgba(228, 64, 95, 0.3);
+    background: rgba(193, 53, 132, 0.2);
+    border-color: rgba(193, 53, 132, 0.5);
 }
 
 .contact-item .social-link.instagram:hover {
-    background: rgba(228, 64, 95, 0.3);
-    border-color: #E4405F;
-    box-shadow: 0 15px 40px rgba(228, 64, 95, 0.5), 0 0 30px rgba(228, 64, 95, 0.3);
+    background: rgba(193, 53, 132, 0.4);
+    border-color: rgba(193, 53, 132, 0.8);
+    box-shadow: 0 15px 40px rgba(193, 53, 132, 0.6), 0 0 30px rgba(193, 53, 132, 0.5);
 }
 
 .contact-item .social-link.tiktok {
-    background: rgba(37, 244, 238, 0.1);
-    border-color: rgba(37, 244, 238, 0.3);
+    background: rgba(254, 44, 85, 0.2);
+    border-color: rgba(254, 44, 85, 0.5);
 }
 
 .contact-item .social-link.tiktok:hover {
-    background: rgba(37, 244, 238, 0.3);
-    border-color: #25F4EE;
-    box-shadow: 0 15px 40px rgba(37, 244, 238, 0.5), 0 0 30px rgba(37, 244, 238, 0.3);
+    background: rgba(254, 44, 85, 0.4);
+    border-color: rgba(254, 44, 85, 0.8);
+    box-shadow: 0 15px 40px rgba(254, 44, 85, 0.6), 0 0 30px rgba(254, 44, 85, 0.5);
 }
 
 .contact-item .social-link.linkedin {
-    background: rgba(0, 119, 181, 0.1);
-    border-color: rgba(0, 119, 181, 0.3);
+    background: rgba(0, 119, 181, 0.2);
+    border-color: rgba(0, 119, 181, 0.5);
 }
 
 .contact-item .social-link.linkedin:hover {
-    background: rgba(0, 119, 181, 0.3);
-    border-color: #0077B5;
-    box-shadow: 0 15px 40px rgba(0, 119, 181, 0.5), 0 0 30px rgba(0, 119, 181, 0.3);
+    background: rgba(0, 119, 181, 0.4);
+    border-color: rgba(0, 119, 181, 0.8);
+    box-shadow: 0 15px 40px rgba(0, 119, 181, 0.6), 0 0 30px rgba(0, 119, 181, 0.5);
 }
 
 .contact-form {
