@@ -469,8 +469,25 @@ p {
 .mission-hero,
 .team-hero {
     padding: 120px 0 80px;
-    background: linear-gradient(135deg, var(--white) 0%, var(--secondary-color) 50%, var(--highlight-color) 100%);
-    min-height: 100vh;
+    background: linear-gradient(135deg, #ffffff 0%, #fff8e1 30%, #fff3cd 60%, #ffeaa7 100%);
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.team-hero h1 {
+    color: #312b69;
+    font-size: 3.8rem;
+    margin-bottom: 1rem;
+    font-family: 'Palatino', 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
+}
+
+.team-hero p {
+    color: #14a99d;
+    font-size: 1.3rem;
+    font-family: 'Palatino', 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
 }
 
 .back-button {
@@ -553,7 +570,17 @@ p {
 /* Team Section */
 .team {
     padding: 80px 0;
-    background: var(--white);
+    background: linear-gradient(135deg, #ffffff 0%, #fff8e1 30%, #fff3cd 60%, #ffeaa7 100%);
+}
+
+.team .section-header h2 {
+    color: #312b69;
+    font-family: 'Palatino', 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
+}
+
+.team .section-header p {
+    color: #14a99d;
+    font-family: 'Palatino', 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
 }
 
 .team-grid {
@@ -563,13 +590,68 @@ p {
 }
 
 .team-member {
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.9);
     padding: 2rem;
     border-radius: 15px;
     text-align: center;
-    box-shadow: var(--shadow);
-    transition: transform 0.3s ease;
-    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    backdrop-filter: blur(10px);
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border-color: #feba4b;
+}
+
+.team-member h3 {
+    color: #312b69;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Palatino', 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
+}
+
+.team-member .role {
+    color: #f0463a;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-family: 'Palatino', 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
+}
+
+.team-year {
+    margin-bottom: 4rem;
+}
+
+.year-title {
+    color: #312b69;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: 'Palatino', 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
+    position: relative;
+}
+
+.year-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(135deg, #feba4b, #f0463a);
+    border-radius: 2px;
+}
+
+.member-role {
+    color: #f0463a;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-family: 'Palatino', 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
 }
 
 .team-member:hover {
