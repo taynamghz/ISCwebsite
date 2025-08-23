@@ -589,6 +589,34 @@ p {
     gap: 2rem;
 }
 
+.team-pyramid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.pyramid-row {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.pyramid-row.top-row {
+    margin-bottom: 1rem;
+}
+
+.pyramid-row.bottom-row {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pyramid-row.bottom-row .team-member {
+    flex: 0 1 200px;
+    max-width: 200px;
+}
+
 .team-member {
     background: rgba(255, 255, 255, 0.9);
     padding: 2rem;
