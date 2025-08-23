@@ -562,21 +562,47 @@ async function submitToGoogleSheets(data) {
     const scriptUrl = 'https://script.google.com/a/macros/psu.edu.sa/s/AKfycbzLcNym5zGLu7at8OvmDOoZfFVSvwDhviqtZ7z9rqkk30ftsGBb1UZZ2-sil2HJkv4J/exec';
     
     try {
+        console.log('Submitting form data:', data);
+        
         const response = await fetch(scriptUrl, {
             method: 'POST',
-            mode: 'no-cors', // Required for cross-origin requests
+            mode: 'cors', // Try with CORS first
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
             },
             body: new URLSearchParams(data)
         });
         
-        // Since we're using no-cors, we can't read the response
-        // We'll assume success if no error is thrown
-        return { status: 'success', message: 'Application submitted successfully!' };
+        if (response.ok) {
+            const result = await response.json();
+            console.log('Form submission response:', result);
+            return result;
+        } else {
+            console.error('Form submission failed:', response.status, response.statusText);
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
         
     } catch (error) {
-        throw new Error('Failed to submit application');
+        console.error('Form submission error:', error);
+        
+        // If CORS fails, try with no-cors as fallback
+        try {
+            const fallbackResponse = await fetch(scriptUrl, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: new URLSearchParams(data)
+            });
+            
+            console.log('Fallback submission completed');
+            return { status: 'success', message: 'Application submitted successfully!' };
+            
+        } catch (fallbackError) {
+            console.error('Fallback submission also failed:', fallbackError);
+            throw new Error('Failed to submit application. Please check your internet connection and try again.');
+        }
     }
 }
 
@@ -586,20 +612,72 @@ async function submitContactForm(data) {
     const scriptUrl = 'https://script.google.com/a/macros/psu.edu.sa/s/AKfycbzLcNym5zGLu7at8OvmDOoZfFVSvwDhviqtZ7z9rqkk30ftsGBb1UZZ2-sil2HJkv4J/exec';
     
     try {
+        console.log('Submitting contact form data:', data);
+        
         const response = await fetch(scriptUrl, {
             method: 'POST',
-            mode: 'no-cors', // Required for cross-origin requests
+            mode: 'cors', // Try with CORS first
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
             },
             body: new URLSearchParams(data)
         });
         
-        // Since we're using no-cors, we can't read the response
-        // We'll assume success if no error is thrown
-        return { status: 'success', message: 'Message sent successfully!' };
+        if (response.ok) {
+            const result = await response.json();
+            console.log('Contact form submission response:', result);
+            return result;
+        } else {
+            console.error('Contact form submission failed:', response.status, response.statusText);
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
         
     } catch (error) {
-        throw new Error('Failed to send message');
+        console.error('Contact form submission error:', error);
+        
+        // If CORS fails, try with no-cors as fallback
+        try {
+            const fallbackResponse = await fetch(scriptUrl, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: new URLSearchParams(data)
+            });
+            
+            console.log('Contact form fallback submission completed');
+            return { status: 'success', message: 'Message sent successfully!' };
+            
+            } catch (fallbackError) {
+        console.error('Contact form fallback submission also failed:', fallbackError);
+        throw new Error('Failed to send message. Please check your internet connection and try again.');
     }
+}
+
+// Test function to check if the Google Apps Script is working
+async function testFormSubmission() {
+    console.log('Testing form submission...');
+    
+    const testData = {
+        fullName: 'Test User',
+        phoneNumber: '1234567890',
+        studentId: 'TEST123',
+        major: 'Computer Science',
+        graduationYear: '2025',
+        role: 'member',
+        department: 'PM',
+        roleSuitability: 'Test suitability',
+        previousExperience: 'Test experience'
+    };
+    
+    try {
+        const result = await submitToGoogleSheets(testData);
+        console.log('Test submission result:', result);
+        showNotification('Test submission completed. Check console for details.', 'success');
+    } catch (error) {
+        console.error('Test submission failed:', error);
+        showNotification('Test submission failed. Check console for details.', 'error');
+    }
+}
 } 
